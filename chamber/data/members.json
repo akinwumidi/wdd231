@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Timbuktu Traders",
+        "address": "10 Market St, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-1234",
+        "url": "#",
+        "imageName": "timbuktu-traders.png",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Sahara Supplies Co.",
+        "address": "15 Desert Rd, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-5678",
+        "url": "#",
+        "imageName": "sahara-supplies.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Timbuktu Travel Agency",
+        "address": "5 Adventure Ave, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-2468",
+        "url": "#",
+        "imageName": "timbuktu-travel.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Ng Handicrafts",
+        "address": "8 Artisan Lane, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-7890",
+        "url": "#",
+        "imageName": "Ng-handicrafts.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Nomad's Coffee House",
+        "address": "3 Camel Rd, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-1122",
+        "url": "#",
+        "imageName": "nomads-coffee.png",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Golden Sands Restaurant",
+        "address": "20 Oasis Blvd, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-3344",
+        "url": "#",
+        "imageName": "golden-sands.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Sankore Bookstore",
+        "address": "25 Scholar St, Timbuktu, Ng 999",
+        "phoneNumber": "(+234) 555-5566",
+        "url": "#",
+        "imageName": "sankore-books.jpg",
+        "membershipLevel": 3
+    }
+]
