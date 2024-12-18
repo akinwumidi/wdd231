@@ -145,16 +145,17 @@ function displayModal (course) {
     const techStack = document.createElement('p');
 
     courseDetails.innerHTML = '';
-    closeButton.textContent = '❌';
+    closeButton.textContent = 'Close ❌';
     subjectNumber.innerHTML = `${course.subject} ${course.number}`;
     title.innerHTML = `${course.title}`;
     credits.innerHTML = `<strong>Credits</strong>: ${course.credits}`;
     certificate.innerHTML = `<strong>Certificate</strong>: ${course.certificate}`
     description.innerHTML = `${course.description}`;
     techStack.innerHTML = `<strong>Technologies</strong>: ${course.technology.join(', ')}`
-
-    courseDetails.appendChild(closeButton);
-    courseDetails.appendChild(subjectNumber);
+    
+    ModalHeader.appendChild(closeButton);
+    ModalHeader.appendChild(subjectNumber);
+    courseDetails.appendChild(ModalHeader);
     courseDetails.appendChild(title);
     courseDetails.appendChild(credits);
     courseDetails.appendChild(certificate);
