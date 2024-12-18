@@ -61,6 +61,20 @@ const courses = [
       completed: false
     }
   ];
+
+  
+  // Handle button clicks and make one active at a time
+  function setActiveButton(buttonId) {
+    // Get all buttons and remove active class
+    const buttons = document.querySelectorAll('.actionBtn')
+      buttons.forEach(button => {
+        button.classList.remove('active-filter-button');
+      });
+
+      // Add active class to the clicked button
+      document.getElementById(buttonId).classList.add('active-filter-button');
+    }
+
   
   // Function to display courses dynamically based on filter
   function displayCourses(filter = "all") {
@@ -102,9 +116,22 @@ const courses = [
   }
   
   // Event listeners for filter buttons
-  document.getElementById('allCourses').addEventListener('click', () => displayCourses("all"));
-  document.getElementById('cseCourses').addEventListener('click', () => displayCourses("CSE"));
-  document.getElementById('wddCourses').addEventListener('click', () => displayCourses("WDD"));
+document.getElementById('allCourses').addEventListener('click', () => {
+      displayCourses("all");
+      setActiveButton('allCourses');
+    });
+
+    document.getElementById('cseCourses').addEventListener('click', () => {
+      displayCourses("CSE");
+      setActiveButton('cseCourses');
+    });
+
+    document.getElementById('wddCourses').addEventListener('click', () => {
+      displayCourses("WDD");
+      setActiveButton('wddCourses');
+    });
+
+
   
   // Hamburger menu functionality
   const hamburger = document.querySelector('.hamburger');
