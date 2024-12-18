@@ -97,8 +97,9 @@ const courses = [
         courseCard.classList.add('completed');
       }
       courseCard.innerHTML = `
-        <h3>${course.subject} ${course.number}</h3>
+      <h3>${course.subject} ${course.number}</h3>
       `;
+      courseCard.addEventListener("click", () => displayModal(course))
       courseContainer.appendChild(courseCard);
   
       // Create list item
@@ -130,6 +131,51 @@ document.getElementById('allCourses').addEventListener('click', () => {
       displayCourses("WDD");
       setActiveButton('wddCourses');
     });
+
+
+function displayModal (course) {
+    const courseDetails = document.querySelector('.course-details');
+    const ModalHeader = document.createElement('div')
+    const closeButton = document.createElement('button');
+    const subjectNumber = document.createElement('h2');
+    const title = document.createElement('h3');
+    const credits = document.createElement('p');
+    const description = document.createElement ('p');
+    const certificate = document.createElement('p');
+    const techStack = document.createElement('p');
+
+    courseDetails.innerHTML = '';
+    closeButton.textContent = '❌';
+    subjectNumber.innerHTML = `${course.subject} ${course.number}`;
+    title.innerHTML = `${course.title}`;
+    credits.innerHTML = `<strong>Credits</strong>: ${course.credits}`;
+    certificate.innerHTML = `<strong>Certificate</strong>: ${course.certificate}`
+    description.innerHTML = `${course.description}`;
+    techStack.innerHTML = `<strong>Technologies</strong>: ${course.technology.join(', ')}`
+
+    courseDetails.appendChild(closeButton);
+    courseDetails.appendChild(subjectNumber);
+    courseDetails.appendChild(title);
+    courseDetails.appendChild(credits);
+    courseDetails.appendChild(certificate);
+    courseDetails.appendChild(description);
+    courseDetails.appendChild(techStack);
+  
+    
+    courseDetails.showModal();
+
+    closeButton.addEventListener("click", () => {
+        courseDetails.close();
+    })
+
+}
+
+
+
+
+
+
+
 
 
   
