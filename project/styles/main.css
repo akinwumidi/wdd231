@@ -238,18 +238,22 @@ a {
   transition: all 0.1s ease;
   background: var(--main-color2);
 }
-
+ .mobile-cart-notifications{
+    display: none;
+    align-items: center;
+    gap: 15px;
+ }
 .mobile-nav-container a{
   display: block;
   padding: 0.93rem 1.25rem;
   color: var(--white-color);
 }
 .mobile-nav-container button {
-  margin: 0 1.25rem;
+  margin: 10px 1.25rem 0 1.25rem;
 
 }
 
-.mobile-nav-container a:focus {
+.mobile-nav-container a:focus,.mobile-nav-container a:hover {
   background: var(--support-color);
 }
 
@@ -1168,6 +1172,7 @@ footer {
   .hamburger {
     display: flex;
   }
+  .mobile-cart-notifications{display: flex;}
   .header-nav {
     padding: 0.62rem 0;
   }

@@ -212,7 +212,12 @@ function addToCart(id) {
 }
 
 function updateCartCount() {
-  document.getElementById('cart-count').innerText = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const cartCountElements = document.querySelectorAll('.cart-count');
+  const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+  
+  cartCountElements.forEach(element => {
+    element.innerText = totalCount;
+  });
 }
 
 function toggleCart() {
