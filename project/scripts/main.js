@@ -237,9 +237,12 @@ function renderCartItems() {
         <h4>${product.title}</h4>
         <p>₦ ${product.price}</p>
         <p>Quantity: ${product.quantity}</p>
-        <button onclick="updateQuantity('${product.id}', 'decrease')">-</button>
-        <button onclick="updateQuantity('${product.id}', 'increase')">+</button>
-        <button onclick="removeFromCart('${product.id}')">Remove</button>
+        <div class="cart-item-action-container"> 
+        <button class="btn-custom btn-green" onclick="updateQuantity('${product.id}', 'decrease')">-</button>
+        <button class="btn-custom btn-black" onclick="updateQuantity('${product.id}', 'increase')">+</button>
+        <button class="btn-custom btn-red" onclick="removeFromCart('${product.id}')">Remove</button>
+        </div>
+        
       </div>
 
     `;

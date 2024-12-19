@@ -70,10 +70,24 @@ a {
   border-radius: 0.31rem;
   font-weight: 600;
 }
+.btn-custom{border: none;outline: none;padding: 5px; cursor: pointer;}
+.btn-black{
+    background: var(--black-color);
+    color: var(--white-color);
+}
+.btn-green{
+    background: var(--main-color2);
+    color: var(--white-color);
+}
+.btn-red{
+    background: var(--support-color);
+    color: var(--white-color);
+}
 
 .btn-main:hover {
   background: transparent;
   border: 0.12rem solid var(--support-color);
+  color: var(--support-color);
 }
 .main-section-tittle {
   display: flex;
@@ -1071,9 +1085,17 @@ position: relative;
 .cart-item div {
   flex-grow: 1;
 }
+.cart-item-action-container{
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 1 0;
+    justify-content: space-between;
+    padding: 5px 0;
+}
 
 .cart-item button {
   margin: 0 5px;
+  flex-grow: 1;
 }
 /* ====== Shop Page products-container section ends here ====== */
 
