@@ -1,0 +1,27 @@
+/* Default variable reference */
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --main-color: rgb(10, 173, 10);
+  --main-color2: #0aad0a;
+  --main-color3: rgb(10, 163, 10);
+  --support-color: #fb175f;
+  --gray-color: rgb(114, 118, 126);
+  --gray-color2: #f4f4f4;
+  --light-gray: rgb(232, 233, 235);
+  --box-shadow: rgb(0 0 0 / 16%) 0px 2px 8px;
+  --green-gradient: linear-gradient(
+    to right,
+    rgba(0, 128, 0, 0.7),
+    rgba(0, 128, 0, 0.5)
+  );
+  --light-green-gradient: linear-gradient(
+    to right,
+    rgba(0, 128, 0, 0.2),
+    rgba(0, 128, 0, 0.1)
+  );
+  --transition: 0.5s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    border-color 0.5s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+}
+
+/* Default variable reference */
