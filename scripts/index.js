@@ -170,7 +170,41 @@ document.getElementById('allCourses').addEventListener('click', () => {
 
 }
 
-
+ // Hamburger menu functionality
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    
+    // Update aria-expanded attribute
+    const isExpanded = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', isExpanded);
+    
+    // Optionally prevent scrolling when menu is open
+    document.body.style.overflow = isExpanded ? 'hidden' : '';
+  });
+  
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
 
   // Set current year and last modified date in footer
   document.getElementById('currentyear').textContent = new Date().getFullYear();
