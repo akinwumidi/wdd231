@@ -62,6 +62,19 @@ const courses = [
     }
   ];
 
+    // Handle button clicks and make one active at a time
+  function setActiveButton(buttonId) {
+    // Get all buttons and remove active class
+    const buttons = document.querySelectorAll('.actionBtn')
+      buttons.forEach(button => {
+        button.classList.remove('active-filter-button');
+      });
+
+      // Add active class to the clicked button
+      document.getElementById(buttonId).classList.add('active-filter-button');
+    }
+
+    
   
   // Set current year and last modified date in footer
   document.getElementById('currentyear').textContent = new Date().getFullYear();
