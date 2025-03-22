@@ -1,0 +1,7 @@
+:root {
+    --primary-color: #1b577e;
+    --secondary-color: #d4edda;
+    --text-color: white;
+    --hover-color: #76b3f0;
+    --transition: background-color 0.3s ease-in-out;
+}
