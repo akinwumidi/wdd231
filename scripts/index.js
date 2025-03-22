@@ -74,7 +74,46 @@ const courses = [
       document.getElementById(buttonId).classList.add('active-filter-button');
     }
 
-    
+    // Function to display courses dynamically based on filter
+  function displayCourses(filter = "all") {
+    const courseContainer = document.getElementById('courseCards');
+    const courseList = document.getElementById('courseList');
+    courseContainer.innerHTML = '';
+    courseList.innerHTML = '';
+  
+    let totalCredits = 0;
+  
+    const filteredCourses = courses.filter(course => {
+      return filter === "all" || course.subject === filter;
+    });
+  
+    filteredCourses.forEach(course => {
+      // Create course card
+      const courseCard = document.createElement('div');
+      courseCard.classList.add('course-card');
+      if (course.completed) {
+        courseCard.classList.add('completed');
+      }
+      courseCard.innerHTML = `
+      <h3>${course.subject} ${course.number}</h3>
+      `;
+      courseCard.addEventListener("click", () => displayModal(course))
+      courseContainer.appendChild(courseCard);
+  
+      // Create list item
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `${course.subject} ${course.number} - ${course.title} - <span class="credits">${course.credits} credits</span>`;
+      courseList.appendChild(listItem);
+  
+      totalCredits += course.credits;
+    });
+  
+    // Append total credits
+    const totalListItem = document.createElement('li');
+    totalListItem.innerHTML = `Total Credits: <span>${totalCredits} credits</span>`;
+    courseList.appendChild(totalListItem);
+  }
+  
   
   // Set current year and last modified date in footer
   document.getElementById('currentyear').textContent = new Date().getFullYear();
