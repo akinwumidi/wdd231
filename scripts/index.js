@@ -114,7 +114,24 @@ const courses = [
     courseList.appendChild(totalListItem);
   }
   
-  
+  // Event listeners for filter buttons
+document.getElementById('allCourses').addEventListener('click', () => {
+      displayCourses("all");
+      setActiveButton('allCourses');
+    });
+
+    document.getElementById('cseCourses').addEventListener('click', () => {
+      displayCourses("CSE");
+      setActiveButton('cseCourses');
+    });
+
+    document.getElementById('wddCourses').addEventListener('click', () => {
+      displayCourses("WDD");
+      setActiveButton('wddCourses');
+    });
+
+
+
   // Set current year and last modified date in footer
   document.getElementById('currentyear').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;
