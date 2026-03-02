@@ -208,3 +208,6 @@ document.getElementById('allCourses').addEventListener('click', () => {
       document.body.style.overflow = '';
     }
   });
+    // Initial load of all courses
+  displayCourses();
+  
