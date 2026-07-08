@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +16,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>Israel Damilola Akinwumi - WDD 231 - Web Frontend Development 1</title>
     <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/index.js" defer></script>
 
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -30,7 +32,7 @@
                     height="90">
                 <h1>Israel Damilola Akinwumi</h1>
             </div>
-    
+
             <nav>
                 <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span class="line"></span>
@@ -55,34 +57,53 @@
                         <!-- Dynamically populated with JavaScript -->
                     </ul>
                 </section>
-    
+
                 <section class="location">
                     <h2>Aba Nigeria Temple, NG</h2>
                     <div class="image-container">
                         <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria temple" width="300" height="200">
-    
+
                     </div>
                     <p>Aba, NG</p>
                 </section>
             </div>
-    
+
             <div>
                 <section class="certificate">
                     <h2>Web and Computer Programming Certificate</h2>
-    
+
                     <div class="filter-buttons">
                         <button id="allCourses" class="actionBtn active-filter-button">All</button>
                         <button id="cseCourses" class="actionBtn">CSE</button>
                         <button id="wddCourses" class="actionBtn">WDD</button>
                     </div>
-    
+
                     <div id="courseCards" class="course-cards"></div>
                     <dialog class="course-details"></dialog>
                 </section>
             </div>
-    
+
         </div>
     </main>
-    
+    <footer>
+        <div class="footer-connect">
+            <a href="https://akinwumidi.dev" target="_blank"> <span class="icon-holder"><i
+                        class="ri-global-line"></i></span></a>
+            <a href="https://www.linkedin.com/in/israelakinwumi" target="_blank"> <span class="icon-holder"><i
+                        class="ri-linkedin-fill"></i></span></a>
+            <a href="http://github.com/akinwumidi" target="_blank"> <span class="icon-holder"><i
+                        class="ri-github-line"></i></span></a>
+            <a href="http://x.com/akinwumidi" target="_blank"> <span class="icon-holder"><i
+                        class="ri-twitter-x-line"></i></span></a>
+        </div>
+        <div class="footer-content">
+            <p> &copy; <span id="currentyear"></span> 🌹Israel Damilola Akinwumi🌹Nigeria</p>
+            <p id="lastModified"></p>
+        </div>
+        <div class="flag-container"><img src="images/nigerian-flag.svg" alt="Nigerian flag" width="45" height="30">
+        </div>
+    </footer>
+
 </body>
+
 </html>
